@@ -139,7 +139,7 @@ print(d1, d2, d3, d4, d5, d6)
 # ptl.show()
 
 # 加载已有数字模板，分析特征值
-eigenvalue = [] # 字典保存数字对应的图片像素值
+eigenvalue = [] # 列表保存数字对应的图片像素值
 for t in range(10):
 	arr = np.array(Image.open('./' + str(t) + '.jpg'))
 	rows,cols = arr.shape
