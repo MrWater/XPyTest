@@ -12,6 +12,7 @@ plt.figure('lean')
 
 plt.subplot(2,1,1)
 arr = np.array(Image.open('./0.jpg')).flatten()
+print(arr)
 n,bins,patches = plt.hist(arr, bins=256, normed=1, facecolor='green', alpha=0.75)
 
 plt.subplot(2,1,2)
