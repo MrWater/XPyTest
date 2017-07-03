@@ -1,5 +1,5 @@
-# !/user/bin/python
-# -*-coding:utf8-*-
+#! /uer/bin/env python
+# -*- coding:utf-8 -*-
 
 from PIL import Image
 
