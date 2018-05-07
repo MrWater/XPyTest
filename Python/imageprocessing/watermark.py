@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 import matplotlib.pyplot as ptl
 
-img = Image.open(r'C:\Users\WX\Desktop\test.jpg').convert('RGBA')
+img = Image.open(r'C:\Users\WX\Desktop\\5a3094dad9c60.jpg').convert('RGBA')
 txt = Image.new('RGBA', img.size, (0,0,0,0))
 fnt = ImageFont.truetype('c:/Windows/fonts/Tahoma.ttf', 20)
 d = ImageDraw.Draw(txt)

@@ -1,29 +1,39 @@
-#! /uer/bin/env python
-# -*- coding:utf-8 -*-
+# coding:utf-8
 
-__author__ = 'wx'
+from numpy import *
 
-import numpy as np 
-import matplotlib.pyplot as plt
+# 给出训练数据以及对应的类别
 
-from PIL import Image
 
-plt.figure('lean')
+def createDataSet():
+    group = array([[1.0, 2.0], [1.2, 0.1], [0.1, 1.4], [0.3, 3.5]])
+    labels = ['A', 'A', 'B', 'B']
+    return group, labels
 
-plt.subplot(2,1,1)
-arr = np.array(Image.open('./0.jpg')).flatten()
-print(arr)
-n,bins,patches = plt.hist(arr, bins=256, normed=1, facecolor='green', alpha=0.75)
+# 通过KNN进行分类
 
-plt.subplot(2,1,2)
-img = Image.open('./imgs/0.jpg')
-r,g,b = img.split()
-arr = np.array(r).flatten()
-plt.hist(arr, bins=256, normed=1, facecolor='r', edgecolor='r', hold=1)
-arr = np.array(g).flatten()
-plt.hist(arr, bins=256, normed=1, facecolor='g', edgecolor='g', hold=1)
-arr = np.array(b).flatten()
-plt.hist(arr, bins=256, normed=1, facecolor='b', edgecolor='b')
 
-plt.show()
+def classify(input, dataSet, label, k):
+    dataSize = dataSet.shape[0]
+    # 计算欧式距离
+    diff = tile(input, (dataSize, 1)) - dataSet
+    sqdiff = diff ** 2
+    squareDist = sum(sqdiff, axis=1)  # 行向量分别相加，从而得到新的一个行向量
+    dist = squareDist ** 0.5
 
+    # 对距离进行排序
+    sortedDistIndex = argsort(dist)  # argsort()根据元素的值从大到小对元素进行排序，返回下标
+
+    classCount = {}
+    for i in range(k):
+        voteLabel = label[sortedDistIndex[i]]
+        # 对选取的K个样本所属的类别个数进行统计
+        classCount[voteLabel] = classCount.get(voteLabel, 0) + 1
+    # 选取出现的类别次数最多的类别
+    maxCount = 0
+    for key, value in classCount.items():
+        if value > maxCount:
+            maxCount = value
+            classes = key
+
+    return classes

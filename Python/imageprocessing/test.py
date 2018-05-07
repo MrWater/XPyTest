@@ -8,7 +8,7 @@ from PIL import Image # library for showing image
 import matplotlib.pyplot as plt # library for processing image
 
 
-img = Image.open(r'C:\Users\WX\Desktop\test.jpg')
+img = Image.open(r'C:\Users\WX\Desktop\\5a3094dad9c60.jpg')
 
 print(vars(img))
 

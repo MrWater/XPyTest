@@ -1,0 +1,25 @@
+1499866046293	geckodriver	INFO	Listening on 127.0.0.1:58229
+1499866048480	mozprofile::profile	INFO	Using profile path C:\Users\WX\AppData\Local\Temp\rust_mozprofile.bBMKPE5tPeke
+1499866048485	geckodriver::marionette	INFO	Starting browser D:\Firefox\firefox.exe
+1499866048489	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58237
+1499866048864	Marionette	WARN	Deprecated preference marionette.defaultPrefs.enabled detected, please use marionette.enabled
+1499866050126	Marionette	INFO	Listening on port 58237
+1499866050503	Marionette	WARN	TLS certificate errors will be ignored for this session
+1499866052596	Marionette	INFO	Ceased listening
+1499866065039	geckodriver	INFO	Listening on 127.0.0.1:58260
+1499866067135	mozprofile::profile	INFO	Using profile path C:\Users\WX\AppData\Local\Temp\rust_mozprofile.N58wnuVxQTB7
+1499866067144	geckodriver::marionette	INFO	Starting browser D:\Firefox\firefox.exe
+1499866067154	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58266
+1499866067507	Marionette	WARN	Deprecated preference marionette.defaultPrefs.enabled detected, please use marionette.enabled
+1499866068616	Marionette	INFO	Listening on port 58266
+1499866068683	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://api.live.bilibili.com/ajax/feed/list?&pagesize=6&page=1&callback=jQuery17206904200805067426_1499866069484&_=1499866069663, line 1: SyntaxError: missing ; before statement
+1499866091117	geckodriver	INFO	Listening on 127.0.0.1:58327
+1499866093208	mozprofile::profile	INFO	Using profile path C:\Users\WX\AppData\Local\Temp\rust_mozprofile.RzkOfduYZUnR
+1499866093214	geckodriver::marionette	INFO	Starting browser D:\Firefox\firefox.exe
+1499866093219	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58334
+1499866093558	Marionette	WARN	Deprecated preference marionette.defaultPrefs.enabled detected, please use marionette.enabled
+1499866094714	Marionette	INFO	Listening on port 58334
+1499866094772	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://api.live.bilibili.com/ajax/feed/list?&pagesize=6&page=1&callback=jQuery172032972460939275605_1499866095576&_=1499866095746, line 1: SyntaxError: missing ; before statement
+1499866100762	Marionette	INFO	Ceased listening

@@ -29,6 +29,7 @@ ptl.title(u'灰度', fontproperties='SimHei')
 img_arr = np.array(img)
 
 rows, cols = img_arr.shape
+
 for i in range(rows):
     for j in range(cols):
         if img_arr[i, j] <= 127:
@@ -78,7 +79,7 @@ for i in range(max_x - min_x):
             flag = True
             break
 
-    print(flag)
+    # print(flag)
     if flag:  # 说明在黑色
         if not flag2:  # 如果刚才在黑色列，说明一直处于黑色列，不管，否则说明由白色进入黑色，开始记录
             pass
@@ -107,7 +108,7 @@ for i in range(max_x - min_x):
 
             flag2 = True
 
-print(d1, d2, d3, d4, d5, d6)
+# print(d1, d2, d3, d4, d5, d6)
 
 # ptl.figure('captcha')
 
@@ -168,6 +169,7 @@ ptl.title(u'原数', fontproperties='SimHei')
 img_arr = np.array(img.crop((0, 0, d1, max_y - min_y)))
 rows, cols = img_arr.shape
 
+# 采用曼哈顿距离算法
 max_match = 0
 for v in eigenvalue:
     cnt = 0
@@ -183,6 +185,10 @@ for v in eigenvalue:
     if cnt / pixel_sum > max_match:
         max_match = cnt / pixel_sum
         value = v
+    # print(np.array(v))
+    # print(img_arr)
+    # print((img_arr-np.array(v)))
+    # t = sum([abs(x) for x in (img_arr-np.array(v)).reshape(rows*cols)])
 
 ptl.subplot(3, 5, 7)
 ptl.imshow(Image.fromarray(value[0]), cmap='gray')

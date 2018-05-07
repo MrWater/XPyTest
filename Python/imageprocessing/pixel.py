@@ -6,7 +6,7 @@ from PIL import Image
 import matplotlib.pyplot as ptl
 import numpy
 
-img = Image.open(r'C:\Users\WX\Desktop\test.png').convert('L')
+img = Image.open(r'C:\Users\WX\Desktop\\5a3094dad9c60.jpg').convert('L')
 img = numpy.array(img) # get the martix form image
 
 rows,cols = img.shape
