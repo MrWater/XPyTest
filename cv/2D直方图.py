@@ -6,9 +6,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-img = cv2.imread('image/3.jpg')
-hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-hist = cv2.calcHist([hsv], [0, 1], None, [180, 256], [0, 180, 0, 256])
+roi = cv2.imread("image/douyin.jpg", 0)
+print(roi.shape[::-1])
 
-plt.imshow(hist, interpolation='nearest')
-plt.show()
+lst = [1,2,3]
+print(lst[::-1])
