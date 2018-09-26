@@ -38,7 +38,7 @@ while vc.isOpened():
 
 		# epsilon = 0.01 * cv2.arcLength(cnt, True)
 		# approx = cv2.approxPolyDP(cnt,epsilon,True)
-		img = cv2.drawContours(img, [cnt], -1, (0, 255, 0), 2)
+		img = cv2.drawContours(img, [cnt], -1, (0, 255, 0), 2)git 
 	# img = cv2.drawContours(frame, contours, -1, (0, 255, 0), 1)
 
 	cv2.imshow("img", img)
