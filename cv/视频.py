@@ -47,18 +47,18 @@ while vc.isOpened():
 
 		(x,y), (MA,ma), angle = cv2.fitEllipse(cnt)
 		max_angle = (np.pi * 10 / 180)
-		print(area/hull_area)
+		#print(area/hull_area)
 		if angle > max_angle and angle < (np.pi/2 - max_angle) or (area/hull_area < 0.8):
 			continue
 
 		epsilon = 0.01 * cv2.arcLength(cnt, True)
 		approx = cv2.approxPolyDP(cnt,epsilon,True)
 		black_img = np.zeros((frame_w, frame_h), np.uint8)
-		#mask_img = cv2.drawContours(black_img, [cnt], -1, (255, 255, 255), -1)
-		img = cv2.drawContours(img, [cnt], -1, (255, 255, 255), -1)
+		mask_img = cv2.drawContours(black_img, [cnt], -1, (255, 255, 255), -1)
+		#img = cv2.drawContours(img, [cnt], -1, (255, 255, 255), -1)
 
 		#img1 = cv2.inpaint(img, mask_img, 3, cv2.INPAINT_TELEA)
-		#img2 = cv2.inpaint(img, mask_img, 3, cv2.INPAINT_NS)
+		img = cv2.inpaint(img, mask_img, 3, cv2.INPAINT_NS)
 	# img = cv2.drawContours(frame, contours, -1, (0, 255, 0), 1)
 
 	cv2.imshow("img1", frame)
