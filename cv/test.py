@@ -1,7 +1,11 @@
 #-*-coding:utf8-*-
 
-import urllib2
+import numpy as np
 
-url = ""
-res = urllib2.urlopen("http://103.235.253.172:8666/data/mi/info_artist/2018091814_artist/artist_full_2018091814_110.json")
-print(res.read())
+test = [[1],
+        [2]]
+
+print(test == eval('test'))
+
+print(eval("(\"test,\" * 4)[:-1]"))
+print(np.hstack([test, test, test]))
