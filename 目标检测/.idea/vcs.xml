@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../keras" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SSD_keras" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/yiyi_mtcnn_keras" vcs="Git" />
   </component>
 </project>

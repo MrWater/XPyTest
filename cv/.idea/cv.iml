@@ -4,6 +4,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 3.5 (cv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="ml" />
+    <orderEntry type="module" module-name="keras" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="pytest" />

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cv.iml" filepath="$PROJECT_DIR$/.idea/cv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../keras/.idea/keras.iml" filepath="$PROJECT_DIR$/../../keras/.idea/keras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ml/.idea/ml.iml" filepath="$PROJECT_DIR$/../ml/.idea/ml.iml" />
     </modules>
   </component>
 </project>
